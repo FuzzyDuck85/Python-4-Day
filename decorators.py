@@ -33,10 +33,20 @@ def make_pretty(callback):
 def bare_bones_business():
     print("I am doing the core ordinary work")
 
-bare_bones_business()
+# bare_bones_business()
 
 # bare_bones_business()
 # bare_bones_business()
 # bare_bones_business()
 # fancy_business = make_pretty(bare_bones_business)
 # fancy_business()
+from timing_function import *
+
+@timing_function
+def cool_function():
+    num_list = []
+    for num in (range(0, 100000000)):
+        num_list.append(num)
+    print(f'sum of all numbers: {sum(num_list)}')
+
+print(cool_function())
